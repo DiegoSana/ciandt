@@ -1,0 +1,23 @@
+//
+//  Diego Attribute styles
+//  ____________________________________________
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    div[data-role='diego-attribute-form'] {
+        max-width: 50%;
+    }
+}
+
+//
+//  Mobile @screen__m
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    div[data-role='diego-attribute-form'] {
+        max-width: 100%;
+    }
+}

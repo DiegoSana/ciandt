@@ -1,0 +1,23 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/**
+ * Product diego attributes wrapper
+ *
+ * @var $block Template
+ * @var Escaper $escaper
+ */
+?>
+<div class="diego-attributes-wrapper">
+    <div class="value">
+        <h3>Current value</h3>
+        <?= $block->getChildHtml('product.diego.attribute.value')?>
+    </div>
+
+    <div class="form">
+        <h3>Update value</h3>
+        <?= $block->getChildHtml('product.diego.attribute.form')?>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Vendor\DiegoAttribute\Api\DiegoAttributeManagementInterface"
+                type="Vendor\DiegoAttribute\Model\DiegoAttributeManagement"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="set" xsi:type="object">Vendor\DiegoAttribute\Console\Command\Set</item>
+                <item name="enable" xsi:type="object">Vendor\DiegoAttribute\Console\Command\Enable</item>
+                <item name="disable" xsi:type="object">Vendor\DiegoAttribute\Console\Command\Disable</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

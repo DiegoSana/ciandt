@@ -1,0 +1,19 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Vendor\DiegoAttribute\Block\Product\Value;
+
+/**
+ * Product diego's attributes view value
+ *
+ * @var $block Value
+ * @var Escaper $escaper
+ */
+
+$_product = $block->getProduct();
+$attributeLabel = $_product->getResource()->getAttribute('diego_attribute')->getStoreLabel();
+$attributeValue = $_product->getData('diego_attribute') ?? 'N/A';
+?>
+
+<b><?= $escaper->escapeHtml($attributeLabel)?>:</b>
+<span><?= $escaper->escapeHtml($attributeValue)?></span>

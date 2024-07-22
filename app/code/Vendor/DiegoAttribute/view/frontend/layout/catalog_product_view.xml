@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="product.info.details">
+        <block class="Magento\Framework\View\Element\Template"
+               name="product.diego.attribute.wrapper"
+               template="Vendor_DiegoAttribute::product/view.phtml"
+               group="detailed_info"
+               ifconfig="diego_attribute/settings/enabled">
+            <arguments>
+                <argument translate="true" name="title" xsi:type="string">CI&amp;T</argument>
+                <argument name="sort_order" xsi:type="string">50</argument>
+            </arguments>
+
+            <block class="Vendor\DiegoAttribute\Block\Product\Value"
+                   name="product.diego.attribute.value"
+                   template="Vendor_DiegoAttribute::product/value.phtml"
+                   group="detailed_info"/>
+            <block class="Vendor\DiegoAttribute\Block\Product\Form"
+                   name="product.diego.attribute.form"
+                   template="Vendor_DiegoAttribute::product/form.phtml"
+                   group="detailed_info"/>
+        </block>
+    </referenceBlock>
+</page>

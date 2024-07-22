@@ -1,0 +1,21 @@
+{
+    "name": "vendor/module-diegoattribute",
+    "description": "CI&T challenge module",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Diego Sanabria",
+            "email": "diegohsanabria@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vendor\\DiegoAttribute\\": ""
+        }
+    }
+}

@@ -1,0 +1,7 @@
+type Query {
+    diegoAttributes(sku: String!, store: Int): DiegoAttribute  @resolver(class: "Vendor\\DiegoAttribute\\Model\\Resolver\\DiegoAttributes") @cache(cacheable: false)
+}
+
+type DiegoAttribute {
+    value: String!
+}

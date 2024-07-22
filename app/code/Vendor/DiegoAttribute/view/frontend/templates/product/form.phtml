@@ -1,0 +1,63 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Vendor\DiegoAttribute\Block\Product\Form;
+
+/**
+ * Product Diego's attributes form
+ *
+ * @var $block Form
+ * @var Escaper $escaper
+ */
+
+$_product = $block->getProduct();
+
+?>
+
+<div>
+    <form name="diego-attribute-form"
+          data-role="diego-attribute-form"
+          method="post"
+          id="diego-attribute-form"
+          class="form"
+          action="<?= $escaper->escapeUrl($block->getFormAction()); ?>"
+          data-hasrequired="<?= $escaper->escapeHtmlAttr(__('* Required Fields')) ?>"
+          data-mage-init='{"validation": {}}'>
+        <input type="hidden" name="sku" value="<?= $escaper->escapeHtmlAttr($_product->getSku()) ?>" />
+        <?= $block->getBlockHtml('formkey')?>
+        <fieldset class="fieldset">
+            <fieldset class="fieldset">
+                <div class="field name required">
+                    <label class="label" for="diego_attribute"><span><?= $escaper->
+                            escapeHtmlAttr(__('Diego\'s Attribute')) ?></span></label>
+                    <div class="control">
+                        <input name="diego_attribute"
+                               id="diego_attribute"
+                               title="Diego Attribute"
+                               value=""
+                               class="input-text"
+                               type="text"
+                               data-validate="{required:true,
+                               'validate-alphanum-with-spaces':true,
+                               'diego-attribute-validation':true}">
+                    </div>
+                </div>
+            </fieldset>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" title="Save">
+                    <span><?= $escaper->escapeHtmlAttr(__('Save')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#diego-attribute-form": {
+        "Vendor_DiegoAttribute/js/validate-attribute": {}
+    }
+}
+</script>
