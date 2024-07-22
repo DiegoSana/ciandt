@@ -19,8 +19,8 @@ Warden installed https://docs.warden.dev/installing.html
 
 Git clone
 ```
-git clone git@github.com:DiegoSana/m2-rounding.git
-cd m2-rounding
+git clone git@github.com:DiegoSana/ciandt.git
+cd ciandt
 ```
 Start infrastructure
 ```
