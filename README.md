@@ -24,7 +24,7 @@ cd ciandt
 ```
 Start infrastructure
 ```
-warden sign-certificate exampleproject.test
+warden sign-certificate ciandt.test
 warden env up
 ```
 Install database
