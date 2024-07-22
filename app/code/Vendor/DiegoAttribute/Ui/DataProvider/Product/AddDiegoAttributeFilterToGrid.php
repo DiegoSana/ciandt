@@ -19,9 +19,9 @@ class AddDiegoAttributeFilterToGrid implements AddFilterToCollectionInterface
     {
         if (isset($condition['eq'])) {
             if ($condition['eq'] === '0') {
-                $collection->addFieldToFilter($field, ['ne' => null]);
+                $collection->addFieldToFilter($field, [['null' => true],['']]);
             } else {
-                $collection->addFieldToFilter($field, ['neq' => null]);
+                $collection->addFieldToFilter($field, [['notnull' => false],['neq' => '']]);
             }
         }
     }

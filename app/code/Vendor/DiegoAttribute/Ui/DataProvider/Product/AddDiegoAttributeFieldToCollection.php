@@ -14,7 +14,6 @@ class AddDiegoAttributeFieldToCollection implements AddFieldToCollectionInterfac
      */
     public function addField(Collection $collection, $field, $alias = null)
     {
-        var_dump('sssssssssssssssssssssssssss');
         $collection->addFieldToSelect($field, $alias);
     }
 }

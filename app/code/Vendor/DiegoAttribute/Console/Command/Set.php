@@ -69,7 +69,7 @@ class Set extends Command
 
         if (!$this->attributeManagement->getStatus((int) $store)) {
             $output->writeln("<error>The attribute is not enabled.</error>");
-            return Cli::RETURN_SUCCESS;
+            return Cli::RETURN_FAILURE;
         }
 
         $collection = $this->productCollectionFactory->create()

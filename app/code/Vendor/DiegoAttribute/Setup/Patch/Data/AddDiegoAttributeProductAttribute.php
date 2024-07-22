@@ -56,7 +56,7 @@ class AddDiegoAttributeProductAttribute implements DataPatchInterface, PatchReve
                 'required' => false,
                 'backend' => '',
                 'sort_order' => '30',
-                'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
+                'global' => ScopedAttributeInterface::SCOPE_STORE,
                 'default' => null,
                 'visible' => true,
                 'user_defined' => true,
@@ -69,8 +69,8 @@ class AddDiegoAttributeProductAttribute implements DataPatchInterface, PatchReve
                 'group' => 'General',
                 'used_in_product_listing' => true,
                 'is_used_in_grid' => true,
-                'is_visible_in_grid' => false,
-                'is_filterable_in_grid' => false,
+                'is_visible_in_grid' => true,
+                'is_filterable_in_grid' => true,
                 'option' => ['values' => [""]],
                 'frontend_class' => 'validate-length minimum-length-3'
             ]
